@@ -9,6 +9,8 @@ import {MaterialModule} from "./material.module";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {RouterModule} from "@angular/router";
 import {SebastianComponent} from "./pages/sebastian/sebastian.component";
+import {AppRoutingModule} from "./app-routing.module";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -22,8 +24,10 @@ import {SebastianComponent} from "./pages/sebastian/sebastian.component";
         BrowserAnimationsModule,
         MaterialModule,
         MatToolbarModule,
-        RouterModule
+        RouterModule,
+        HttpClientModule
     ],
+  exports: [AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
 })

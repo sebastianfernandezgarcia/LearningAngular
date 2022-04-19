@@ -5,7 +5,9 @@ import {SebastianComponent} from "./pages/sebastian/sebastian.component";
 
 const routes: Routes = [
   { path: 'sebastian', component: SebastianComponent},
+  { path: 'products', loadChildren: () => import('./pages/products/products.module').then(m => m.ProductsModule) },
   { path: '**', redirectTo: '/sebastian'},
+
 ];
 
 @NgModule({
